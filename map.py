@@ -16,7 +16,7 @@ async def sample(client, message):
 
     for loc in alerts["alerts"]:
         text += "\n"
-        text += "🔴: "+loc["location_title"]
+        text += "🔴 "+loc["location_title"]
 
     await message.edit_text(
 f"""<b>‼Повітряна тривога в таких місцях:</b>
