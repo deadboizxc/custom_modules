@@ -12,11 +12,11 @@ from utils.misc import (
     gitrepo,
 )
 
-mod_version = f"4.1.4-RE-beta"
+mod_version = f"4.1.6-RE-beta"
 modrepo = Repo("/data/data/com.termux/files/home/zxc-team/custom_modules/")
 
 
-@Client.on_message(filters.command(["modules_support", "mod_repo"], prefix) & filters.me)
+@Client.on_message(filters.command(["modules_support","mod_support", "modules_repo", "mod_repo", "modrepo"], prefix) & filters.me)
 async def support(_, message: Message):
     devs = ["@deadboizxc"]
     random.shuffle(devs)
@@ -37,7 +37,7 @@ async def support(_, message: Message):
         disable_web_page_preview=True,
     )
 
-@Client.on_message(filters.command(["modules_version", "mod_ver"], prefix) & filters.me)
+@Client.on_message(filters.command(["modules_version", "mod_ver", "modver"], prefix) & filters.me)
 async def version(client: Client, message: Message):
     changelog = ""
     await message.delete()
