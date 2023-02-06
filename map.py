@@ -9,14 +9,14 @@ import jmespath
 
 @Client.on_message(filters.command('map', prefixes=prefix) & filters.me)
 async def sample(client, message):
-    url2 = "https://api.alerts.in.ua/v1/alerts/active.json"
+    url2 = "https://api.alerts.in.ua/v2/alerts/active.json"
     res = requests.get(url2)
     alerts = res.json()
     text  = ""
 
     for loc in alerts["alerts"]:
         text += "\n"
-        text += "🔴 "+loc["location_title"]
+        text += "🔴 "+loc["n"]
 
     await message.edit_text(
 f"""<b>‼Повітряна тривога в таких місцях:</b>
