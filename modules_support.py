@@ -12,8 +12,9 @@ from utils.misc import (
     gitrepo,
 )
 
-mod_version = f"4.1.2-RE-beta"
+mod_version = f"4.1.4-RE-beta"
 modrepo = Repo("/data/data/com.termux/files/home/zxc-team/custom_modules/")
+
 
 @Client.on_message(filters.command(["modules_support", "mod_repo"], prefix) & filters.me)
 async def support(_, message: Message):
@@ -35,7 +36,6 @@ async def support(_, message: Message):
         f"<b>Commands count:</b> {commands_count}</b>",
         disable_web_page_preview=True,
     )
-
 
 @Client.on_message(filters.command(["modules_version", "mod_ver"], prefix) & filters.me)
 async def version(client: Client, message: Message):
