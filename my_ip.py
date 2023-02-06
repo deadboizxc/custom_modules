@@ -17,6 +17,6 @@ f"""
 )
 
 
-modules_help["my_id"] = {
+modules_help["my_ip"] = {
     "ip": "send my ip",
 }
